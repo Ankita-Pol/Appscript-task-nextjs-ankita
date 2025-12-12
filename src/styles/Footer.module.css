@@ -1,0 +1,163 @@
+.footer {
+  background: #000000;
+  padding: 40px 20px;
+  font-family: sans-serif;
+  color: #ffffff; 
+}
+
+/* ---------------- TOP SECTION ---------------- */
+.top {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.newsletter h3,
+.contact h3 {
+  font-size: 16px;
+  margin-bottom: 8px;
+  color: #ffffff; /* white */
+}
+
+.newsletter p,
+.contact p {
+  font-size: 14px;
+  margin-bottom: 6px;
+  color: #cccccc; /* soft gray for better UI */
+}
+
+.inputRow {
+  display: flex;
+  gap: 10px;
+}
+
+.inputRow input {
+  flex: 1;
+  padding: 8px 10px;
+  font-size: 14px;
+  border: none;
+  outline: none;
+  background: #1a1a1a;
+  color: #ffffff;
+}
+
+.inputRow button {
+  padding: 8px 14px;
+  background: #ffffff;
+  color: #000000;
+  border: none;
+  cursor: pointer;
+}
+
+.mt {
+  margin-top: 20px;
+}
+
+.divider {
+  margin: 40px 0;
+  border: 0;
+  border-top: 1px solid #333333; /* softer, subtle border */
+}
+
+/* ---------------- LINKS SECTION ---------------- */
+.linksSection {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+  color: #ffffff; /* makes all link headings white */
+}
+
+.linksSection h4 {
+  margin-bottom: 10px;
+  font-size: 15px;
+  color: #ffffff;
+}
+
+.linksSection ul {
+  padding: 0;
+  list-style: none;
+}
+
+.linksSection li {
+  margin: 6px 0;
+  font-size: 14px;
+  cursor: pointer;
+  color: #cccccc; /* improve readability */
+}
+
+.linksSection li:hover {
+  color: #ffffff; /* hover highlight */
+}
+
+.social span {
+  margin-right: 10px;
+  font-size: 20px;
+  color: #ffffff;
+}
+
+.cards img {
+  width: 40px;
+  margin-right: 8px;
+  filter: brightness(0) invert(1); /* makes icons white on black */
+}
+
+.copy {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 13px;
+  color: #aaaaaa; /* soft gray */
+}
+
+
+@media (max-width: 1024px) {
+  .top {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .linksSection {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  .footer {
+    padding: 25px 15px;
+  }
+
+  .top {
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .inputRow {
+    flex-direction: column;
+  }
+
+  .inputRow button {
+    width: 100%;
+  }
+
+  .linksSection {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .cards img {
+    width: 32px;
+  }
+
+  .social span {
+    font-size: 18px;
+  }
+
+  .copy {
+    margin-top: 25px;
+    font-size: 12px;
+  }
+}

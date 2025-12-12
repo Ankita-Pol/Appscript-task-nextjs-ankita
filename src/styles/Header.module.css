@@ -1,0 +1,159 @@
+/* MAIN HEADER (top bar) */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 20px;
+  background: #fff;
+  border-bottom: 1px solid #eee;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* LEFT SECTION */
+.left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* CENTER SECTION */
+.center {
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
+  flex-grow: 1;
+}
+
+/* RIGHT SECTION */
+.right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+
+/* RIGHT ICONS */
+.icons {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+
+.iconBtn {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+/* Hamburger */
+.hamburger {
+  background: none;
+  border: none;
+  font-size: 22px;
+  display: none;
+}
+
+
+.iconBox {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.iconBox :global(img) {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* NAVIGATION BELOW HEADER */
+.desktopMenu {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 14px 0;
+  background: white;
+  border-bottom: 1px solid #eee;
+}
+
+.desktopMenu a {
+  text-decoration: none;
+  color: #111;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+/* HAMBURGER (MOBILE ONLY) */
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+/* MOBILE MENU */
+.mobileMenu {
+  position: fixed;
+  left: -320px;
+  top: 0;
+  width: 320px;
+  height: 100vh;
+  background: #fff;
+  box-shadow: 2px 0 12px rgba(0,0,0,0.12);
+  transition: left 0.3s ease;
+  z-index: 2000;
+  padding: 20px;
+}
+
+.mobileMenu.show {
+  left: 0;
+}
+
+.mobileMenu ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.mobileMenu li {
+  padding: 12px 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.closeBtn {
+  background: none;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+/* BACKDROP */
+.backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.3);
+  z-index: 1500;
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .desktopMenu {
+    display: none;
+  }
+
+  .centerLogo {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
