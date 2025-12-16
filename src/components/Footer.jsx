@@ -66,12 +66,9 @@ export default function Footer() {
 
           <h4 className={styles.mt}>mettā muse ACCEPTS</h4>
           <div className={styles.cards}>
-            <img src="/googlepay.png" alt="gpay" />
+            <img src="/gpay.png" alt="gpay" />
             <img src="/visa.png" alt="visa" />
-            <img src="/master.png" alt="master" />
-            <img src="/amex.png" alt="amex" />
-            <img src="/apple.png" alt="apple" />
-            <img src="/paypal.png" alt="paypal" />
+         
           </div>
         </div>
       </div>
