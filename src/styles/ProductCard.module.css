@@ -4,7 +4,11 @@
   border-radius: 8px;
   background: #fff;
   transition: transform 0.2s ease;
+    text-decoration: none;
+  color: inherit;
+  display: block;
 }
+
 
 .card:hover {
   transform: translateY(-4px);
