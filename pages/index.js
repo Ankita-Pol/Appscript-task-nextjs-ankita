@@ -4,13 +4,16 @@ import ProductCard from "@/components/ProductCard";
 import SortDropdown from "@/components/SortDropdrown";
 // import styles from "@/styles/Home.module.css";
 import styles from "../src/styles/Home.module.css"
-import { useState } from "react";
+import { useState , useEffect} from "react";
 
 export default function Home({ products }) {
   const [filterOpen, setFilterOpen] = useState(true);
+  const [isMobile, setIsMobile] = useState(false);
 
-  const isMobile =
-    typeof window !== "undefined" && window.innerWidth < 768;
+  useEffect(() => {
+  setIsMobile(window.innerWidth < 768);
+}, []);
+
 
   return (
     <>

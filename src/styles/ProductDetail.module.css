@@ -91,9 +91,43 @@
 }
 
 /* Mobile */
+/* Mobile */
 @media (max-width: 768px) {
+  .page {
+    padding: 30px 12px;
+  }
+
   .container {
     grid-template-columns: 1fr;
-    padding: 24px;
+    gap: 30px;
+    padding: 20px;
+  }
+
+  .image {
+    width: 100%;
+    max-height: 280px;
+  }
+
+  .title {
+    font-size: 22px;
+  }
+
+  .price {
+    font-size: 22px;
+  }
+
+  .description {
+    font-size: 14px;
+  }
+
+  .actions {
+    flex-direction: column;
+  }
+
+  .primaryBtn,
+  .secondaryBtn {
+    width: 100%;
+    padding: 14px;
   }
 }
+
