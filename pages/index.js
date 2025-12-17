@@ -67,33 +67,14 @@ export default function Home({ products }) {
   );
 }
 
-export async function getServerSideProps() {
-  try {
-    const res = await fetch(
-      "https://fakestoreapi.com/products",
-      {
-        headers: {
-          "Accept": "application/json",
-          "User-Agent": "Mozilla/5.0",
-        },
-      }
-    );
+export async function getStaticProps() {
+  const res = await fetch("https://fakestoreapi.com/products");
+  const products = await res.json();
 
-    if (!res.ok) {
-      throw new Error(`Status ${res.status}`);
-    }
-
-    const products = await res.json();
-
-    return {
-      props: { products },
-    };
-  } catch (error) {
-    console.error("FETCH FAILED:", error.message);
-
-    return {
-      props: { products: [] },
-    };
-  }
+  return {
+    props: { products },
+    revalidate: 60,
+  };
 }
+
 
